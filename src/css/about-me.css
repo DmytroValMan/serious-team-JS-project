@@ -1,0 +1,49 @@
+.about {
+}
+
+.about-top-wrapper {
+}
+
+.about-text {
+}
+
+.about-text-first-span {
+}
+
+.about-text-second-span {
+}
+
+.about-me-list {
+}
+
+.ac.about-me-item {
+  background-color: inherit;
+
+  border: none;
+  border-bottom: solid 1px rgba(250, 250, 250, 0.2);
+}
+
+.about-me-header {
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+}
+
+.about-me-btn {
+}
+
+.about-me-item-wrapper {
+}
+
+.accordion-container .ac .ac-panel .ac-text {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+.about-me-item-text {
+}
