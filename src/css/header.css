@@ -37,24 +37,53 @@
   display: none;
 }
 
-.burger-button {
+.burger-button,
+.close-button {
   background-color: transparent;
-  outline: transparent;
   min-width: 28px;
   min-height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 0;
+
   border: none;
 }
 
+.close-button {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+}
+
+.close-icon,
 .burger-icon {
   stroke: #fafafa;
-  width: 28px;
-  height: 28px;
 }
 
 .logo-name {
   font-size: 20px;
   letter-spacing: -0.02em;
   color: #fafafa;
+}
+
+.modal-body-lock {
+  overflow: hidden;
+}
+
+.nav-link {
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  transition: color 300ms ease-in-out;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  border: none;
+}
+
+.menu-button:hover,
+.nav-link:hover {
+  color: #ed3b44;
 }
 
 @media screen and (min-width: 768px) {
@@ -80,12 +109,11 @@
     border: none;
   }
 
-  .menu-button:hover {
-    color: #ed3b44;
-  }
-
   .nav-list {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
   }
 
   .menu-visible {
@@ -125,6 +153,10 @@
 }
 
 .modal-overlay {
+  background-image: url(../img/menu/menu.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: fixed;
   top: 0;
   left: 0;
@@ -158,7 +190,42 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 260px;
-  padding-bottom: 40px;
+  padding-top: 302px;
+  padding-bottom: 64px;
   justify-content: space-between;
+}
+
+.nav-list-mob {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-mob .nav-link {
+  color: #fafafa;
+  cursor: pointer;
+  align-items: center;
+  transition: color 250ms ease;
+  letter-spacing: -0.02em;
+}
+
+.order-button-mob {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60px;
+  min-width: 163px;
+  min-height: 55px;
+  background-color: #ed3b44;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  transition: background-color 300ms ease-in-out;
+  border: none;
+  padding: 14px 32px;
+}
+
+.order-button-mob:hover {
+  background-color: #e0373f;
 }

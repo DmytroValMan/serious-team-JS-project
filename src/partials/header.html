@@ -5,26 +5,26 @@
         <source
           media="(min-width: 1440px)"
           srcset="
-            ../img/header/header-desc.jpg    1x,
-            ../img/header/header-desc@2x.jpg 2x
+            /img/header/header-desc.jpg    1x,
+            /img/header/header-desc@2x.jpg 2x
           "
         />
         <source
           media="(min-width: 768px)"
           srcset="
-            ../img/header/header-tab.jpg    1x,
-            ../img/header/header-tab@2x.jpg 2x
+            /img/header/header-tab.jpg    1x,
+            /img/header/header-tab@2x.jpg 2x
           "
         />
         <source
           media="(min-width: 320px)"
           srcset="
-            ../img/header/header-mob.jpg    1x,
-            ../img/header/header-mob@2x.jpg 2x
+            /img/header/header-mob.jpg    1x,
+            /img/header/header-mob@2x.jpg 2x
           "
         />
         <img
-          src="../img/header/header-mob.jpg"
+          src="/img/header/header-mob.jpg"
           alt="Logo photo"
           class="logo-img"
         />
@@ -49,21 +49,21 @@
     <a href="#work-together" class="order-button">Order the project</a>
 
     <button type="button" class="burger-button">
-      <svg class="burger-icon" >
-        <use href="../img/icons.svg#burger"></use>
+      <svg class="burger-icon" width="28" height="28">
+        <use href="/img/icons.svg#burger"></use>
       </svg>
     </button>
   </div>
 
-  <div class="modal-overlay" data-menu>
+  <div class="modal-overlay is-open" data-menu>
     <div class="modal">
-      <button class="mobile-menu-close-button" aria-label="Close mobile menu">
-        <svg class="mobile-menu-close-icon" width="32" height="32">
-          <use href="/img/sprite.svg#close"></use>
+      <button class="close-button" aria-label="Close mobile menu">
+        <svg class="close-icon" width="32" height="32">
+          <use href="/img/icons.svg#close"></use>
         </svg>
       </button>
       <nav class="nav-mob">
-        <ul class="nav-list">
+        <ul class="nav-list-mob">
           <li class="nav-item">
             <a class="nav-link" href="#about-me">About me</a>
           </li>
