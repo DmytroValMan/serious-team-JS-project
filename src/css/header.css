@@ -81,8 +81,7 @@
   border: none;
 }
 
-.menu-button:hover,
-.nav-link:hover {
+.menu-button:hover, .nav-link:hover {
   color: #ed3b44;
 }
 
@@ -159,7 +158,7 @@
   background-repeat: no-repeat;
   position: fixed;
   top: 0;
-  left: 0;
+  right: -100%;
   width: 100%;
   height: 100%;
   background-color: #0e1823;
@@ -169,13 +168,13 @@
 
   z-index: 1;
 
-  transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
 }
 
 .modal-overlay.is-open {
   opacity: 1;
   pointer-events: auto;
-  transition: opacity 300ms ease-in-out;
+  transform: translateX(-100%);
 }
 
 .modal {
@@ -208,6 +207,11 @@
   align-items: center;
   transition: color 250ms ease;
   letter-spacing: -0.02em;
+}
+
+.nav-mob .nav-link:hover {
+  color: #ed3b44;
+
 }
 
 .order-button-mob {
