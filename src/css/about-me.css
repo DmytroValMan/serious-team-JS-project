@@ -1,16 +1,56 @@
-.about {
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 1440px) {
+}
+
+.about-section {
 }
 
 .about-top-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  gap: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-top-wrapper {
+    margin-bottom: 64px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .about-top-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 96px;
+  }
 }
 
 .about-text {
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #fafafa;
+  padding: 32px 32px 272px;
+  background: #242527;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-text {
+    font-size: 38px;
+    line-height: 1.05;
+    padding: 64px 64px;
+  }
 }
 
 .about-text-first-span {
+  color: #ed3b44;
 }
 
 .about-text-second-span {
+  color: rgba(250, 250, 250, 0.4);
 }
 
 .about-me-list {
@@ -18,25 +58,80 @@
 
 .ac.about-me-item {
   background-color: inherit;
-
   border: none;
   border-bottom: solid 1px rgba(250, 250, 250, 0.2);
+  padding-bottom: 32px;
+  padding-top: 20px;
+  margin: 0;
 }
 
-.about-me-header {
+@media only screen and (min-width: 768px) {
+  .ac.about-me-item {
+    padding-top: 32px;
+  }
+}
+
+.about-me-list .ac .ac-trigger:focus {
+  display: none;
+}
+
+.about-me-list .ac .ac-trigger::after {
+  display: none;
+}
+
+.ac.about-me-item.is-active .arrow {
+  transform: rotate(180deg);
+}
+
+.ac.about-me-item.is-active {
+  padding-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .ac.about-me-item.is-active {
+    padding-bottom: 32px;
+  }
+}
+
+.ac .ac-header.about-me-header {
   font-weight: 600;
   font-size: 16px;
   text-transform: uppercase;
   color: rgba(250, 250, 250, 0.4);
 }
 
-.about-me-btn {
+.about-me-item .ac-trigger.about-me-btn {
+  width: 36px;
+  height: 36px;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-me-item .ac-trigger.about-me-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.about-me-item .ac-trigger.about-me-btn .arrow {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 50%;
+  padding: 9px;
+  width: 36px;
+  height: 36px;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-me-item .ac-trigger.about-me-btn .arrow {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .about-me-item-wrapper {
 }
 
-.accordion-container .ac .ac-panel .ac-text {
+.about-me-list .ac .ac-panel .ac-text {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -46,4 +141,50 @@
 }
 
 .about-me-item-text {
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-section .ac .ac-panel .ac-text {
+  padding: 0;
+}
+
+.ac .ac-panel .ac-text.one {
+  margin-top: 12px;
+  margin-bottom: 32px;
+}
+
+@media only screen and (min-width: 768px) {
+  .ac .ac-panel .ac-text.one {
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .ac .ac-panel .ac-text.one {
+    margin-bottom: 32px;
+  }
+}
+
+.about-me-item-text.one {
+}
+
+.ac.role .ac-panel .ac-text:not(:last-child),
+.ac.education .ac-panel .ac-text:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.wrapper-item {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 1440px) {
+  .wrapper-item {
+    width: calc((100% - 8px) / 2);
+  }
 }
