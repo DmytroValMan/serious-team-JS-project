@@ -1,7 +1,7 @@
 .work-together-container {
   margin-top: 64px;
   margin-bottom: 32px;
-  background-image: url(../img/background-image-work-together.png);
+  background-image: url(.../img/background-image-work-together.png);
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -300,5 +300,109 @@
   .work-together-link {
     width: 171px;
     height: 55px;
+  }
+}
+
+/* modal */
+.work-together-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease-in-out;
+}
+
+.work-together-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.work-together-modal {
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  border-radius: 20px;
+  padding: 64px 32px;
+  width: 343px;
+  height: 276px;
+  background-color: #1c1d20;
+  position: relative;
+}
+
+.work-together-close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fafafa;
+}
+
+.work-together-modal-introduction {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 364px;
+  height: 118px;
+}
+
+.work-together-modal-title {
+  max-width: 279px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #fafafa;
+}
+
+.work-together-modal-subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #fafafa99;
+}
+
+.work-together-close-button:hover .work-together-close-svg {
+  fill: rgba(250, 250, 250, 0.35);
+  rotate: 90deg;
+  transition: all 200ms ease-in-out;
+}
+
+@media only screen and (min-width: 768px) {
+  .work-together-modal {
+    padding: 64px;
+    width: 494px !important;
+    max-height: 246px;
+  }
+
+  .work-together-modal-title {
+    min-width: 392px;
+  }
+
+  .work-together-modal-subtitle {
+    width: 364px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .work-together-modal {
+  }
+
+  .work-together-modal-title {
+    max-width: 364px;
+  }
+
+  .work-together-modal-subtitle {
   }
 }
