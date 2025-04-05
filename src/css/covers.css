@@ -5,17 +5,13 @@
       rgba(255, 0, 0, 0.3) 0%,
       transparent 40%
     ),
-    radial-gradient(
-      circle at 80% 40%,
-      rgba(255, 0, 0, 0.2) 0%,
-      transparent 50%
-    ),
+    radial-gradient(circle at 80% 40%, rgba(255, 0, 0, 0.2) 0%, transparent 50%),
     radial-gradient(
       circle at 50% 70%,
       rgba(255, 0, 0, 0.25) 0%,
       transparent 45%
     ),
-     linear-gradient(135deg, #000000 0%, #1a0000 100%);
+    linear-gradient(135deg, #000000 0%, #1a0000 100%);
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -23,22 +19,19 @@
 }
 
 .marquee-wrapper {
-    transform: rotate(-10deg);
-    margin: 32px 0;
+  transform: rotate(-10deg);
+  margin: 32px 0;
 }
-
 
 .covers-list {
   display: flex;
-  animation: scroll-left 16s linear infinite;
+  animation: scroll-left 20s linear infinite;
   gap: 24px;
 }
-
 
 .covers-list li {
   list-style: none;
   flex: 0 0 auto;
- 
 }
 
 .covers-list img {
@@ -59,7 +52,7 @@
 /* Планшети */
 @media (min-width: 768px) {
   .covers-list img {
-width: 100%;
+    width: 100%;
   }
 }
 
