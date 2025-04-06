@@ -1,3 +1,5 @@
 1. https://github.com/DmytroValMan/serious-team-JS-project/pull/1
 2. https://github.com/DmytroValMan/serious-team-JS-project/pull/3
 3. https://github.com/DmytroValMan/serious-team-JS-project/pull/4
+4. https://github.com/DmytroValMan/serious-team-JS-project/pull/7
+5. https://github.com/DmytroValMan/serious-team-JS-project/pull/10
