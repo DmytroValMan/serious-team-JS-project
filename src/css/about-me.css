@@ -221,20 +221,7 @@
 }
 
 .about-me-skills-swiper {
-  width: 260px;
   padding: 20px 0;
-}
-
-@media only screen and (min-width: 768px) {
-    .about-me-skills-swiper {
-        width: 600px;
-    }
-}
-
-@media only screen and (min-width: 1440px) {
-    .about-me-skills-swiper {
-        width: 1200px;
-    }
 }
 
 .about-me-skill-item {
@@ -242,8 +229,6 @@
   text-align: center;
   padding-top: 53px;
   padding-bottom: 53px;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
   border: 1px solid #FAFAFA33;
 }
 
@@ -261,17 +246,17 @@
 }
 
 .about-me-skills-button-next {
-    margin-left: 32px;
+    margin-left: 55px;
 }
 
 @media only screen and (min-width: 768px) {
-  .skills-button-next {
+  .about-me-skills-button-next {
     margin-left: 64px;
   }
 }
 
 @media only screen and (min-width: 1440px) {
-  .skills-button-next {
+  .about-me-skills-button-next {
       margin-left: 72px;
   }
 }
@@ -280,7 +265,7 @@
     height: 28px;
     width: 28px;
     display: inline-block;
-    stroke-width: 0;
+    stroke-width: 2;
     stroke: currentColor;
     background-color: transparent;
     color: #3B3B3B;
