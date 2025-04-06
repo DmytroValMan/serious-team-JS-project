@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 const list = document.querySelector('.reviews-list');
+const placeholder = document.querySelector('.not-found-placeholder');
 const btnPrev = document.querySelector('.slider-btn.prev');
 const btnNext = document.querySelector('.slider-btn.next');
 
@@ -14,10 +15,16 @@ async function fetchReviews() {
     );
     if (!response.ok) throw new Error('Network error');
     const data = await response.json();
+
+    if (data.length === 0) {
+      showPlaceholder();
+      return;
+    }
+
     renderReviews(data);
     initSwiper();
   } catch (err) {
-    list.innerHTML = `<li class="swiper-slide">Not found</li>`;
+    showPlaceholder();
     console.error(err);
   }
 }
@@ -27,8 +34,10 @@ function renderReviews(reviews) {
     .map(
       ({ avatar_url, author, review }) => `
       <li class="swiper-slide">
-        <img src="${avatar_url}" alt="${author}" class="review-avatar" />
-        <p class="review-author">${author}</p>
+        <div class="review-author">
+          <img src="${avatar_url}" alt="${author}" class="review-avatar" />
+          <p class="review-name">${author}</p>
+        </div>
         <p class="review-text">${review}</p>
       </li>`
     )
@@ -36,11 +45,28 @@ function renderReviews(reviews) {
   list.innerHTML = markup;
 }
 
+function showPlaceholder() {
+  list.style.display = 'none';
+  placeholder.hidden = false;
+  btnPrev.disabled = true;
+  btnNext.disabled = true;
+}
+
 function initSwiper() {
   const swiper = new Swiper('.reviews-swiper', {
     modules: [Navigation, Keyboard, A11y],
     slidesPerView: 1,
-    spaceBetween: 24,
+    spaceBetween: 16,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 24,
+      },
+      1440: {
+        slidesPerView: 4,
+        spaceBetween: 32,
+      },
+    },
     navigation: {
       nextEl: '.slider-btn.next',
       prevEl: '.slider-btn.prev',
@@ -56,7 +82,6 @@ function initSwiper() {
     },
   });
 
-  // Спочатку перевірити кнопки
   btnPrev.disabled = swiper.isBeginning;
   btnNext.disabled = swiper.isEnd;
 }
