@@ -1,17 +1,23 @@
   .project-caption {
     text-transform: uppercase;
     font-weight: 600;
+    font-size: 16px;
     line-height: 1.5;
     letter-spacing: -0.02em ;
     color:#FAFAFA66;
     margin-bottom: 32px;
   }
 
+  .swiper .swiper-wrapper .project-wrapper {
+    display: flex;
+  }
+
   .project-wrapper {
-    display: flex !important;
     flex-direction: column;
     margin-bottom: 32px;
   }
+
+
   @media screen and (min-width: 768px) {
   .project-wrapper {
     margin-bottom: 64px;
@@ -21,7 +27,6 @@
   @media screen and (min-width: 1440px) {
     .project-wrapper {
         flex-direction: row;
-        margin-bottom: 64px;
       }
   }
   @media screen and (min-width: 1440px) {
@@ -154,10 +159,9 @@
 
   .projects-navigation {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     margin-bottom: 64px;
   }
 
@@ -167,10 +171,11 @@
       }
   }
 
-  .swiper-button-prev,
-  .swiper-button-next {
-    position: relative !important;
-  }
+  .swiper .swiper-button-prev,
+  .swiper .swiper-button-next {
+    position: relative;
+}
+
 
   .projects-icon{
     border-radius: 60px;

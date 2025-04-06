@@ -125,8 +125,8 @@ html {
     animation: fadeIn 1s;
   }
 
-  .order-button,
-  .order-button-mob {
+  .order-button {
+    padding: 18px 24px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,10 +139,6 @@ html {
     color: #fafafa;
     transition: background-color 300ms ease-in-out;
     border: none;
-  }
-
-  .order-button {
-    padding: 18px 24px;
   }
 
   .order-button:hover {
@@ -168,7 +164,6 @@ html {
 
   opacity: 0;
   pointer-events: none;
-  visibility: hidden;
   z-index: 1;
 
   transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
@@ -178,7 +173,6 @@ html {
   opacity: 1;
   pointer-events: auto;
   transform: translateX(-100%);
-  visibility: visible;
 }
 
 .modal {
@@ -217,14 +211,6 @@ html {
   color: #ed3b44;
 }
 
-.order-button-mob {
-  padding: 14px 32px;
-}
-
-.order-button-mob:hover {
-  background-color: #e0373f;
-}
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -232,4 +218,24 @@ html {
   100% {
     opacity: 1;
   }
+}
+
+.order-button-mob {
+  padding: 14px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60px;
+  min-width: 163px;
+  min-height: 55px;
+  background-color: #ed3b44;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  transition: background-color 300ms ease-in-out;
+  border: none;
+}
+
+.order-button-mob:hover {
+  background-color: #e0373f;
 }

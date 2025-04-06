@@ -1,37 +1,19 @@
-.faq {
-    padding: 64px 16px;
-}
 .faq-title {
     margin-bottom: 32px;
     font-weight: 600;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: -0.02em;
     color: rgba(250, 250, 250, 0.4);
 }
-.faq-list {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    gap: 20px;
 
-}
 .faq-item {
-    display: flex;
-    align-items: flex-start;
     padding: 20px 0;
-    justify-content: flex-start;
-    flex-direction: column;
-    border-bottom: solid 1px rgba(250, 250, 250, 0.2);
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
+
 .faq-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 343px;
 }
-  
 
 .faq-subtitle {
     display: flex;
@@ -39,9 +21,6 @@
     width: 100%;
     font-weight: 600;
     font-size: 20px;
-    line-height: 1.5;
-    letter-spacing: -0.02em;
-    color: #fafafa;
 }
 
 .faq-item-text {
@@ -49,11 +28,9 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: -0.02em;
-    color: rgba(250, 250, 250, 0.6);
-
     
 }
+
 .faq-btn {
     display: flex;
     justify-content: center;
@@ -66,19 +43,70 @@
     height: 34px;
 }
 
-.faq-item-text {
+.faq-ac-trigger .faq-icon {
+    transition: transform 0.3s ease;
+}
+
+.faq-ac.is-active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-ac-panel {
     display: none;
 }
 
-.faq-item.open .faq-item-text {
+.faq-ac.is-active .faq-ac-panel {
     display: block;
+    height: auto !important;
 }
 
-.faq-icon {
-    width: 20px;
-    height: 20px;
-    transition: transform 0.3s ease;
+@media only screen and (min-width: 768px) {
+    .faq-list {
+        border-top: solid 1px rgba(250, 250, 250, 0.2);
+    }
+
+    .faq-item {
+        padding: 32px 0;
+    }
+
+    .faq-item-text {
+        margin-top: 26px;
+    }
+
+    .faq-btn {
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+    }
 }
-.faq-icon.rotated {
-    transform: rotate(180deg);
+
+@media only screen and (min-width: 1440px) {
+    .faq-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0;
+        }
+    .faq-item {
+        width: 50%;
+    }
+
+    .faq-list::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 1px;
+        background-color: rgba(250, 250, 250, 0.2);
+        border-bottom: solid 1px rgba(250, 250, 250, 0.2);
+    }
+
+    .faq-item:nth-child(odd) {
+        padding-right: 32px;
+    }
+
+    .faq-item:nth-child(even) {
+        padding-left: 32px;
+    }
 }
