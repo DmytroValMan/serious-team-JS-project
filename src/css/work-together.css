@@ -1,0 +1,408 @@
+.work-together-container {
+  margin-top: 64px;
+  margin-bottom: 32px;
+  background-image: url(.../img/background-image-work-together.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.introduction-container {
+  display: flex;
+  gap: 8px;
+  left: 0;
+}
+
+.work-together-img {
+  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+}
+
+.work-together-title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #fafafa;
+}
+
+.word-together {
+  margin-left: -50px;
+}
+
+.work-together-title-red-part {
+  color: #ed3b44;
+}
+
+.work-together-form {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 375px;
+}
+
+.work-together-input {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: solid 0.5px #3b3b3b;
+  padding-bottom: 20px;
+  position: relative;
+  width: 343px;
+  height: 44px;
+}
+
+/* decorations */
+.work-together-input:focus-visible {
+  outline: none;
+}
+
+.work-together-input:focus {
+  border-bottom: solid 0.5px #fafafa33;
+}
+
+.work-together-input:focus::placeholder {
+  color: #fafafa;
+  transition: all 200ms ease-in-out;
+}
+
+.invalid-text,
+.valid-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+  display: none;
+  /* margin-top: -4px; */
+  position: absolute;
+  margin-top: 45px;
+}
+
+.work-together-input-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.invalid-text,
+.valid-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+  display: none;
+  margin-top: 4px;
+  position: relative;
+  transition: all 200ms ease-in-out;
+}
+
+.work-together-input:valid:not(:placeholder-shown) ~ .valid-text {
+  display: block;
+  color: #3cbc81;
+}
+
+.work-together-input:invalid:not(:placeholder-shown) ~ .invalid-text {
+  display: block;
+  color: #e74a3b;
+}
+
+.work-together-input:valid:not(:placeholder-shown) {
+  border-color: #3cbc81;
+}
+
+.work-together-input:invalid:not(:placeholder-shown) {
+  border-color: #e74a3b;
+}
+
+.work-together-comments {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: solid 0.5px #3b3b3b;
+  padding-bottom: 20px;
+  position: relative;
+  width: 343px;
+  height: 44px;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+}
+
+.work-together-comments:focus-visible {
+  outline: none;
+}
+
+.work-together-comments:focus {
+  border-bottom: solid 0.5px #fafafa33;
+}
+
+.work-together-comments:focus::placeholder {
+  color: #fafafa;
+  transition: all 200ms ease-in-out;
+}
+
+/* decorations */
+
+.work-together-button {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: #ed3b44;
+  border-style: none;
+
+  margin-top: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  transition: all 100ms ease-in-out;
+}
+
+.work-together-button:hover {
+  background-color: #e0373f;
+  cursor: pointer;
+}
+
+.work-together-list {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  margin-top: 64px;
+}
+
+.work-together-link {
+  border: 1px solid #fafafa33;
+  border-radius: 60px;
+  height: 37px;
+  padding: 10px 12px;
+  min-width: 118px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  text-decoration: none;
+  color: #fafafa;
+  transition: all 200ms ease-in-out;
+}
+
+.work-together-link:hover {
+  border-color: #fafafa;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .work-together-container {
+    margin-top: 176px;
+    margin-bottom: 169px;
+  }
+
+  .introduction-container {
+    max-width: 542px;
+    gap: 20px;
+  }
+
+  .work-together-img {
+    border-radius: 24px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .work-together-title {
+    line-height: 1.15;
+    color: #fafafa;
+    font-size: 64px;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+  }
+
+  .word-together {
+    margin-left: -95px;
+  }
+
+  .work-together-form {
+    flex-direction: row;
+    gap: 32px;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    align-items: flex-start;
+  }
+
+  .work-together-input {
+    width: 245px;
+    height: 44px;
+  }
+
+  .work-together-button {
+    width: 150px;
+    height: 150px;
+    min-width: 150px;
+    min-height: 150px;
+    margin-top: 0;
+    align-self: flex-start;
+    margin-top: -30px;
+  }
+
+  .work-together-list {
+    margin-top: 36px;
+    gap: 8px;
+  }
+
+  .work-together-link {
+    padding: 18px 32px;
+    min-width: 239px;
+    height: 55px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .work-together-container {
+    margin-top: 164px;
+    padding-top: 80px;
+  }
+
+  .work-together-form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .work-together-input {
+    width: 390px;
+  }
+
+  .work-together-button {
+    margin-left: 54px;
+  }
+
+  .work-together-list {
+    margin-top: 78px;
+  }
+
+  .work-together-link {
+    width: 171px;
+    height: 55px;
+  }
+}
+
+/* modal */
+.work-together-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease-in-out;
+}
+
+.work-together-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.work-together-modal {
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  border-radius: 20px;
+  padding: 64px 32px;
+  width: 343px;
+  height: 276px;
+  background-color: #1c1d20;
+  position: relative;
+}
+
+.work-together-close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fafafa;
+}
+
+.work-together-modal-introduction {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 364px;
+  height: 118px;
+}
+
+.work-together-modal-title {
+  max-width: 279px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #fafafa;
+}
+
+.work-together-modal-subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #fafafa99;
+}
+
+.work-together-close-button:hover .work-together-close-svg {
+  fill: rgba(250, 250, 250, 0.35);
+  rotate: 90deg;
+  transition: all 200ms ease-in-out;
+}
+
+@media only screen and (min-width: 768px) {
+  .work-together-modal {
+    padding: 64px;
+    width: 494px !important;
+    max-height: 246px;
+  }
+
+  .work-together-modal-title {
+    min-width: 392px;
+  }
+
+  .work-together-modal-subtitle {
+    width: 364px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .work-together-modal {
+  }
+
+  .work-together-modal-title {
+    max-width: 364px;
+  }
+
+  .work-together-modal-subtitle {
+  }
+}
