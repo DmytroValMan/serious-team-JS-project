@@ -1,89 +1,84 @@
-import { Swiper } from 'swiper';
-import { Navigation, Keyboard, A11y } from 'swiper/modules';
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import axios from 'axios';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
-const list = document.querySelector('.reviews-list');
-const placeholder = document.querySelector('.not-found-placeholder');
-const btnPrev = document.querySelector('.slider-btn.prev');
-const btnNext = document.querySelector('.slider-btn.next');
-
-async function fetchReviews() {
-  try {
-    const response = await fetch(
-      'https://portfolio-js.b.goit.study/api/reviews'
-    );
-    if (!response.ok) throw new Error('Network error');
-    const data = await response.json();
-
-    if (data.length === 0) {
-      showPlaceholder();
-      return;
-    }
-
-    renderReviews(data);
-    initSwiper();
-  } catch (err) {
-    showPlaceholder();
-    console.error(err);
-  }
-}
-
-function renderReviews(reviews) {
-  const markup = reviews
-    .map(
-      ({ avatar_url, author, review }) => `
-      <li class="swiper-slide">
-        <div class="review-author">
-          <img src="${avatar_url}" alt="${author}" class="review-avatar" />
-          <p class="review-name">${author}</p>
-        </div>
-        <p class="review-text">${review}</p>
-      </li>`
-    )
-    .join('');
-  list.innerHTML = markup;
-}
-
-function showPlaceholder() {
-  list.style.display = 'none';
-  placeholder.hidden = false;
-  btnPrev.disabled = true;
-  btnNext.disabled = true;
-}
-
-function initSwiper() {
+document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.reviews-swiper', {
-    modules: [Navigation, Keyboard, A11y],
+    modules: [Navigation, Pagination],
+    watchOverflow: true,
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
     slidesPerView: 1,
-    spaceBetween: 16,
     breakpoints: {
       768: {
         slidesPerView: 2,
-        spaceBetween: 24,
+        slidesPerGroup: 2,
+        spaceBetween: 16,
       },
       1440: {
         slidesPerView: 4,
-        spaceBetween: 32,
-      },
-    },
-    navigation: {
-      nextEl: '.slider-btn.next',
-      prevEl: '.slider-btn.prev',
-    },
-    keyboard: {
-      enabled: true,
-    },
-    on: {
-      slideChange: function () {
-        btnPrev.disabled = this.isBeginning;
-        btnNext.disabled = this.isEnd;
+        spaceBetween: 16,
       },
     },
   });
 
-  btnPrev.disabled = swiper.isBeginning;
-  btnNext.disabled = swiper.isEnd;
-}
+  loadReviews(swiper);
+});
 
-fetchReviews();
+async function loadReviews(swiper) {
+  try {
+    const response = await axios.get(
+      'https://portfolio-js.b.goit.study/api/reviews'
+    );
+    const reviews = response.data;
+
+    const swiperWrapper = document.querySelector('.reviews-list');
+
+    const reviewsAdd = reviews
+      .map(
+        review => `
+        <div class="swiper-slide">
+            <img class="review-img" src="${review.avatar_url}" alt="${review.author}" />
+            <p class="review-name">${review.author}</p>
+            <p class="review-text">${review.review}</p>  
+        </div>
+      `
+      )
+      .join('');
+
+    swiperWrapper.insertAdjacentHTML('beforeend', reviewsAdd);
+  } catch (error) {
+    console.log('Error loading reviews:', error);
+    const swiperWrapper = document.querySelector('.reviews-list');
+    swiperWrapper.innerHTML =
+      '<div class="reviews-error">Failed to load reviews. Please try again later.</div>';
+
+    const errorElement = document.querySelector('.reviews-error');
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            iziToast.error({
+              position: 'topRight',
+              message: 'Failed to load reviews. Please try again later.',
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    observer.observe(errorElement);
+  }
+}

@@ -1,14 +1,23 @@
-<section class="reviews-section">
-  <div class="reviews-container">
-    <h2 class="reviews-title">Reviews</h2>
-    <div class="swiper reviews-swiper">
-      <ul class="swiper-wrapper reviews-list"></ul>
-      <p class="not-found-placeholder" hidden>Not found</p>
-      <div class="slider-buttons">
-        <button class="slider-btn prev" aria-label="Previous review">
-          &larr;
+<section class="reviews-section" id="reviews">
+  <div class="reviews-bg">
+    <div class="reviews-container container">
+      <h2 class="reviews-title">REVIEWS</h2>
+
+      <div class="swiper reviews-swiper">
+        <div class="swiper-wrapper reviews-list"></div>
+      </div>
+
+      <div class="slider-buttons buttons-reviews">
+        <button class="slider-btn button-prev" type="button">
+          <svg class="prev-icon" width="68" height="68">
+            <use href="../img/icons-1.svg#icon-arrow-narrow-left"></use>
+          </svg>
         </button>
-        <button class="slider-btn next" aria-label="Next review">&rarr;</button>
+        <button class="slider-btn button-next" type="button">
+          <svg class="next-icon" width="68" height="68">
+            <use href="../img/icons-1.svg#icon-arrow-narrow-right"></use>
+          </svg>
+        </button>
       </div>
     </div>
   </div>
