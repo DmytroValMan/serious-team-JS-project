@@ -16,12 +16,11 @@
   background-size: cover;
   overflow: hidden;
   max-height: 508px;
-
 }
 
 .marquee-wrapper {
-    transform: rotate(10deg) translate(-40px, -120px);
-      margin: 32px 0;
+  transform: rotate(10deg) translate(-40px, -120px);
+  margin: 32px 0;
 }
 
 .covers-list {
@@ -31,7 +30,7 @@
 }
 
 .marquee-wrapper.right .covers-list {
-    animation: scroll-right 25s linear infinite;
+  animation: scroll-right 25s linear infinite;
 }
 
 .covers-list li {
@@ -40,9 +39,9 @@
 }
 
 .covers-list img {
-  height: 200px;
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  height: 100%;
 }
 
 @keyframes scroll-left {
@@ -55,21 +54,22 @@
 }
 
 @keyframes scroll-right {
-    from {
-      transform: translateX(-50%);
-    }
-    to {
-      transform: translateX(0);
-    }
+  from {
+    transform: translateX(-50%);
   }
+  to {
+    transform: translateX(0);
+  }
+}
 
 /* Планшети */
 @media (min-width: 768px) {
-    .covers .container {
-        max-height: 960px;
-    }
+  .covers .container {
+    max-height: 960px;
+  }
   .covers-list img {
-    width: 100%;
+    width: 544px;
+    height: 100%;
   }
 }
 
