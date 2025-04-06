@@ -15,29 +15,28 @@ const modalSubtitle = document.querySelector('.work-together-modal-subtitle');
 // fetch api
 const PORTFOLIO_URL = 'https://portfolio-js.b.goit.study/api';
 
-function fetchApi(query, coments) {
+async function fetchApi(query, coments) {
   const userData = {
     email: query.value.trim(),
     comment: coments.value.trim(),
   };
 
-  return axios
+  return await axios
     .post(`${PORTFOLIO_URL}/requests`, userData)
     .then(response => {
       return response;
     })
     .catch(error => {
-      console.log(error);
       iziToast.error({
         title:
           'Sorry, there are no server response. Please check your data or try again later!',
         position: 'topRight',
+        target: '.work-together-section',
         timeout: 5000,
       });
       throw error;
     });
 }
-
 
 form.addEventListener('submit', event => {
   event.preventDefault();
@@ -46,8 +45,9 @@ form.addEventListener('submit', event => {
     .then(response => {
       if (response.data && response.data.error) {
         iziToast.error({
-          title: response.data.error, 
+          title: response.data.error,
           position: 'topRight',
+          target: '.work-together-section',
           timeout: 5000,
         });
       } else {
@@ -68,10 +68,10 @@ form.addEventListener('submit', event => {
       }
     })
     .catch(error => {
-      console.log(error);
       iziToast.error({
         title: 'An error occurred. Please try again later!',
         position: 'topRight',
+        target: '.work-together-section',
         timeout: 5000,
       });
     });

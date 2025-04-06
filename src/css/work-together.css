@@ -1,3 +1,7 @@
+.work-together-section {
+  position: relative;
+}
+
 .work-together-container {
   margin-top: 64px;
   margin-bottom: 32px;
@@ -73,6 +77,13 @@
 .work-together-input:focus::placeholder {
   color: #fafafa;
   transition: all 200ms ease-in-out;
+}
+
+.work-together-input:hover ~ .work-together-input::placeholder,
+.work-together-comments:hover + .work-together-comments::placeholder {
+  border-bottom: solid 0.5px #fafafa33;
+  transition: all 200ms ease-in-out;
+  color: #fafafa;
 }
 
 .invalid-text,
@@ -316,6 +327,7 @@
   justify-content: center;
   align-items: center;
 
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
   transition: opacity 200ms ease-in-out;
