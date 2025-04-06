@@ -125,40 +125,8 @@ html {
     animation: fadeIn 1s;
   }
 
-  /* .order-button,
-  .order-button-mob {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 60px;
-    min-width: 163px;
-    min-height: 55px;
-    background-color: #ed3b44;
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    color: #fafafa;
-    transition: background-color 300ms ease-in-out;
-    border: none;
-  } */
-
   .order-button {
     padding: 18px 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 60px;
-    min-width: 163px;
-    min-height: 55px;
-    background-color: #ed3b44;
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    color: #fafafa;
-    transition: background-color 300ms ease-in-out;
-    border: none;
-  }
-
-  .order-button-mob {
-    padding: 14px 32px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -268,7 +236,6 @@ html {
   border: none;
 }
 
-.order-button:hover,
 .order-button-mob:hover {
   background-color: #e0373f;
 }
