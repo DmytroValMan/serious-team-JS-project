@@ -3,7 +3,9 @@ import Swiper from 'swiper/bundle';
 // import styles bundle
 import 'swiper/css';
 
-const swiper = new Swiper('.swiper', {
+const projectsSwiperContainer = document.querySelector('#projects-swiper-container-id');
+
+const swiper = new Swiper(projectsSwiperContainer, {
     keyboard: {
       enabled: true,
       onlyInViewport: true,
@@ -22,8 +24,8 @@ const swiper = new Swiper('.swiper', {
 
     // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '#projects-swiper-next-id',
+      prevEl: '#projects-swiper-prev-id',
       disabledClass: 'projects-disabled-button'
     },
 
