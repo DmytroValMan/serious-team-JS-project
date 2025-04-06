@@ -87,7 +87,6 @@ color: white;
       .communication,
       .art,
       .urgent-execution {
-        max-width: 768px;
         width: 100%;
         font-size: 18px;
         line-height: 28px;
