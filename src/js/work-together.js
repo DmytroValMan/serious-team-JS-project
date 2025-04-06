@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
@@ -9,13 +8,13 @@ const comentsInput = document.querySelector('.work-together-comments');
 const backdrop = document.querySelector('.work-together-backdrop');
 const closeBtn = document.querySelector('.work-together-close-button');
 
-// for ilustrating message on the page
+// for illustrating message on the page
 const modalTitle = document.querySelector('.work-together-modal-title');
 const modalSubtitle = document.querySelector('.work-together-modal-subtitle');
 
+// fetch api
 const PORTFOLIO_URL = 'https://portfolio-js.b.goit.study/api';
 
-// fetch api
 function fetchApi(query, coments) {
   const userData = {
     email: query.value.trim(),
@@ -35,35 +34,43 @@ function fetchApi(query, coments) {
         position: 'topRight',
         timeout: 5000,
       });
+      throw error;
     });
 }
+
 
 form.addEventListener('submit', event => {
   event.preventDefault();
 
   fetchApi(emailInput, comentsInput)
     .then(response => {
-      const { title, message } = response.data;
+      if (response.data && response.data.error) {
+        iziToast.error({
+          title: response.data.error, 
+          position: 'topRight',
+          timeout: 5000,
+        });
+      } else {
+        const { title, message } = response.data;
+        modalTitle.innerHTML = title;
+        modalSubtitle.innerHTML = message;
+        backdrop.classList.add('is-open');
+        form.reset();
 
-      modalTitle.innerHTML = title;
-      modalSubtitle.innerHTML = message;
-      form.reset();
-      backdrop.classList.add('is-open');
+        function toggleModal() {
+          backdrop.classList.remove('is-open');
+          backdrop.removeEventListener('click', toggleModal);
+          closeBtn.removeEventListener('click', toggleModal);
+        }
 
-      function toggleModal() {
-        backdrop.classList.remove('is-open');
-        backdrop.removeEventListener('click', toggleModal);
-        closeBtn.removeEventListener('click', toggleModal);
+        backdrop.addEventListener('click', toggleModal);
+        closeBtn.addEventListener('click', toggleModal);
       }
-
-      backdrop.addEventListener('click', toggleModal);
-      closeBtn.addEventListener('click', toggleModal);
     })
     .catch(error => {
       console.log(error);
       iziToast.error({
-        title:
-          'Sorry, there are no server response. Please check your data or try again later!',
+        title: 'An error occurred. Please try again later!',
         position: 'topRight',
         timeout: 5000,
       });
