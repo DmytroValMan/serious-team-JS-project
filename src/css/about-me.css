@@ -46,6 +46,19 @@
 }
 
 .about-me-list {
+  margin-bottom: 32px;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-me-list {
+    margin-bottom: 64px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .about-me-list {
+    margin-bottom: 96px;
+  }
 }
 
 .ac.about-me-item {
@@ -181,3 +194,102 @@
     width: calc((100% - 8px) / 2);
   }
 }
+
+
+
+
+/*.About me  ---- skills */
+.about-me-skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-me-skills {
+    margin-bottom: 96px;
+    }
+  }
+
+@media only screen and (min-width: 1440px) {
+    .about-me-skills {
+      padding: 0 32px;
+      margin-bottom: 164px;
+    }
+}
+
+.about-me-skills-swiper {
+  width: 260px;
+  padding: 20px 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .about-me-skills-swiper {
+        width: 600px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .about-me-skills-swiper {
+        width: 1200px;
+    }
+}
+
+.about-me-skill-item {
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 53px;
+  padding-bottom: 53px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  border: 1px solid #FAFAFA33;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-me-skill-item {
+    padding-top: 88px;
+    padding-bottom: 88px;
+    font-size: 20px;
+    line-height: 100%;
+  }
+}
+
+.about-me-skill-item.active-slide {
+  background: #ED3B44;
+}
+
+.about-me-skills-button-next {
+    margin-left: 32px;
+}
+
+@media only screen and (min-width: 768px) {
+  .skills-button-next {
+    margin-left: 64px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .skills-button-next {
+      margin-left: 72px;
+  }
+}
+
+.about-me-icon {
+    height: 28px;
+    width: 28px;
+    display: inline-block;
+    stroke-width: 0;
+    stroke: currentColor;
+    background-color: transparent;
+    color: #3B3B3B;
+}
+
+@media only screen and (min-width: 768px) {
+    .about-me-icon {
+        height: 40px;
+        width: 40px;
+    }
+}
+
