@@ -4,3 +4,4 @@
 4. https://github.com/DmytroValMan/serious-team-JS-project/pull/7
 5. https://github.com/DmytroValMan/serious-team-JS-project/pull/10
 6. https://github.com/DmytroValMan/serious-team-JS-project/pull/12
+7. https://github.com/DmytroValMan/serious-team-JS-project/pull/16
