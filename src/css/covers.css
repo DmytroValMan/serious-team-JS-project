@@ -19,7 +19,7 @@
 }
 
 .marquee-wrapper {
-  transform: rotate(16deg) translate(-40px, -120px);
+  transform: rotate(17deg) translate(-40px, -180px);
   margin: 32px 0;
 }
 
@@ -42,6 +42,7 @@
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   height: 100%;
+  width: 282.29px;
 }
 
 @keyframes scroll-left {
