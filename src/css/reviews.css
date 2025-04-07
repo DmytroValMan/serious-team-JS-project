@@ -63,12 +63,13 @@
 
 .prev-icon,
 .next-icon {
-  fill: #fafafa;
+  stroke: currentColor;
+  color: white;
 }
 
 .button-prev:disabled .prev-icon,
 .button-next:disabled .next-icon {
-  fill: #3b3b3b;
+  color: #3b3b3b;
 }
 
 .buttons-reviews {
