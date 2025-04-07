@@ -1,17 +1,18 @@
 .section-hero {
-  background-image: url(../img/hero/hero_mob@1x.jpg);
+  background-image: url(../img/hero/hero_mob@1x.png);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top left;
   background-size: cover;
 
   max-width: 375px;
   /* margin: 0 auto; */
   padding: 32px 16px;
+  margin: 0 auto;
 }
 
 @media screen and (min-resolution: 192dpi) {
   .section-hero {
-    background-image: url(../img/hero/hero_mob@2x.jpg);
+    background-image: url(../img/hero/hero_mob@2x.png);
   }
 }
 
@@ -22,8 +23,6 @@
   text-transform: uppercase;
   margin-bottom: 212px;
   margin-top: 249px;
-
-  width: 375px;
 }
 
 .social-list {
@@ -50,20 +49,21 @@
 
 @media screen and (min-width: 768px) {
   .section-hero {
-    background-image: url(../img/hero/hero_tab@1x.jpg);
+    background-image: url(../img/hero/hero_tab@1x.png);
     max-width: 768px;
     padding-left: 16px;
   }
 
   @media screen and (min-width: 768px) and (min-resolution: 192dpi) {
     .section-hero {
-      background-image: url(../img/hero/hero_tab@2x.jpg);
+      background-image: url(../img/hero/hero_tab@2x.png);
     }
   }
 
   .section-hero-title {
     font-size: 90px;
     margin-bottom: 187px;
+    margin-left: 0;
   }
 
   .social-link {
@@ -75,26 +75,29 @@
   .social-list {
     justify-content: flex-end;
     gap: 8px;
-    padding-right: 32px;
+    /* padding-right: 32px; */
   }
 }
 
 @media screen and (min-width: 1440px) {
   .section-hero {
-    background-image: url(../img/hero/hero_desk@1x.jpg);
+    background-image: url(../img/hero/hero_desk@1x.png);
     max-width: 1440px;
   }
 
   @media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
     .section-hero {
-      background-image: url(../img/hero/hero_desk@2x.jpg);
+      background-image: url(../img/hero/hero_desk@2x.png);
     }
   }
 
   .section-hero-title {
-    width: 1440px;
+    margin-left: 114px;
+    margin-right: auto;
+    display: block;
 
-    margin: 268px 178px 243px 178px;
+    /* max-width: 1084px; */
+    /* margin: 268px 178px 243px 178px; */
   }
 
   .block-text {
