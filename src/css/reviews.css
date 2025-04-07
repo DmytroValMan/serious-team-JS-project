@@ -1,4 +1,4 @@
-.swiper-slide {
+.swiper-slide-reviews {
   min-height: 302px;
   width: 343px;
   border-radius: 20px;
@@ -17,16 +17,11 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 30px;
-  letter-spacing: -2%;
-  color: #fafafa;
+
   margin-bottom: 8px;
 }
 
 .review-text {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -2%;
   color: #fafafa99;
   display: -webkit-box;
   -webkit-line-clamp: 5;
@@ -39,8 +34,6 @@
 .reviews-title {
   font-weight: 600;
   font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -2%;
   color: #fafafa66;
   margin-bottom: 32px;
 }
@@ -54,7 +47,7 @@
 .button-prev {
   width: 52px;
   height: 52px;
-  border-radius: 60px;
+  border-radius: 50%;
   border: 1px solid #fafafa80;
   padding: 14px;
   background-color: transparent;
@@ -104,9 +97,9 @@
 
   .button-next,
   .button-prev {
-    width: 64px;
-    height: 64px;
-    padding: 16px;
+    width: 68px;
+    height: 68px;
+    padding: 18px;
   }
 
   .prev-icon,
