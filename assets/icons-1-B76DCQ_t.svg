@@ -32,9 +32,5 @@
       <path fill="#ed3b44" d="M6.667 0h18.667a6.667 6.667 0 0 1 6.667 6.667v18.667a6.667 6.667 0 0 1-6.667 6.667H6.667A6.667 6.667 0 0 1 0 25.334V6.667A6.667 6.667 0 0 1 6.667 0z" style="fill:var(--color2, #ed3b44)"/>
       <path fill="none" stroke="#fafafa" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="M20.108 9.333h-8.217a.558.558 0 0 0-.558.558 6.7 6.7 0 0 0 1.962 4.737l.813.813c.081.081.121.121.15.16a.668.668 0 0 1 0 .797c-.029.039-.069.079-.15.16l-.813.813a6.7 6.7 0 0 0-1.962 4.737c0 .308.25.558.558.558h8.217c.308 0 .558-.25.558-.558a6.7 6.7 0 0 0-1.962-4.737l-.813-.813a1.653 1.653 0 0 1-.15-.16.668.668 0 0 1 0-.797c.029-.039.069-.079.15-.16l.813-.813a6.7 6.7 0 0 0 1.962-4.737.558.558 0 0 0-.558-.558z" style="stroke:var(--color1, #fafafa)"/>
     </symbol>
-    <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <line x1="5" y1="12" x2="19" y2="12" />
-      <polyline points="12 5 19 12 12 19" />
-    </symbol>
   </defs>
 </svg>
