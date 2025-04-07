@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .header {
   top: 32px;
   width: 100%;
@@ -47,14 +51,12 @@
   align-items: center;
   border: none;
   padding: 0;
-
-  border: none;
 }
 
 .close-button {
   position: absolute;
   top: 32px;
-  right: 32px;
+  right: 16px;
 }
 
 .close-icon,
@@ -81,7 +83,8 @@
   border: none;
 }
 
-.menu-button:hover, .nav-link:hover {
+.menu-button:hover,
+.nav-link:hover {
   color: #ed3b44;
 }
 
@@ -105,14 +108,10 @@
     text-underline-offset: 3px;
     color: #fafafa;
     transition: color 300ms ease-in-out;
-    border: none;
   }
 
   .nav-list {
     display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
   }
 
   .menu-visible {
@@ -127,6 +126,7 @@
   }
 
   .order-button {
+    padding: 18px 24px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,7 +139,6 @@
     color: #fafafa;
     transition: background-color 300ms ease-in-out;
     border: none;
-    padding: 18px 24px;
   }
 
   .order-button:hover {
@@ -165,7 +164,6 @@
 
   opacity: 0;
   pointer-events: none;
-
   z-index: 1;
 
   transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
@@ -211,10 +209,19 @@
 
 .nav-mob .nav-link:hover {
   color: #ed3b44;
+}
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .order-button-mob {
+  padding: 14px 32px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -227,18 +234,8 @@
   color: #fafafa;
   transition: background-color 300ms ease-in-out;
   border: none;
-  padding: 14px 32px;
 }
 
 .order-button-mob:hover {
   background-color: #e0373f;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
