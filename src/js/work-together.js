@@ -15,13 +15,13 @@ const modalSubtitle = document.querySelector('.work-together-modal-subtitle');
 // fetch api
 const PORTFOLIO_URL = 'https://portfolio-js.b.goit.study/api';
 
-async function fetchApi(query, coments) {
+ function fetchApi(query, coments) {
   const userData = {
     email: query.value.trim(),
     comment: coments.value.trim(),
   };
 
-  return await axios
+  return axios
     .post(`${PORTFOLIO_URL}/requests`, userData)
     .then(response => {
       return response;
