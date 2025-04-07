@@ -1,8 +1,6 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import axios from 'axios';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
@@ -44,7 +42,7 @@ async function loadReviews(swiper) {
     const reviewsAdd = reviews
       .map(
         review => `
-        <div class="swiper-slide">
+        <div class="swiper-slide swiper-slide-reviews">
             <img class="review-img" src="${review.avatar_url}" alt="${review.author}" />
             <p class="review-name">${review.author}</p>
             <p class="review-text">${review.review}</p>  
@@ -55,8 +53,6 @@ async function loadReviews(swiper) {
 
     swiperWrapper.insertAdjacentHTML('beforeend', reviewsAdd);
   } catch (error) {
-    console.log('Error loading reviews:', error);
-    const swiperWrapper = document.querySelector('.reviews-list');
     swiperWrapper.innerHTML =
       '<div class="reviews-error">Failed to load reviews. Please try again later.</div>';
 
