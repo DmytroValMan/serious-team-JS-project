@@ -7,6 +7,11 @@ import 'swiper/css';
 // Initialize Swiper
 const aboutMeSwiperContainer = document.getElementById('about-me-swiper-container-id');
 const swiper = new Swiper(aboutMeSwiperContainer, {
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+
   loop: true,
   slidesPerView: 2, // Mobile
   direction: 'horizontal',
