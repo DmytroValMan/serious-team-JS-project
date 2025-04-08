@@ -30,14 +30,6 @@
   -webkit-text-size-adjust: 100%;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-width: 100vw;
-  min-height: 100vh;
-  margin: 0;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;

@@ -1,3 +1,7 @@
+.about {
+  padding-top: 96px;
+}
+
 .about-top-wrapper {
   display: flex;
   flex-direction: column;
@@ -66,18 +70,18 @@
   border: none;
   border-bottom: solid 1px rgba(250, 250, 250, 0.2);
   padding-bottom: 32px;
-  padding-top: 20px;
+
   margin: 0;
 }
 
-@media only screen and (min-width: 768px) {
-  .ac.about-me-item {
-    padding-top: 32px;
-  }
+.ac.about-me-item:not(:first-child) {
+  padding-top: 20px;
 }
 
-.about-me-list .ac .ac-trigger:focus {
-  display: none;
+@media only screen and (min-width: 768px) {
+  .ac.about-me-item:not(:first-child) {
+    padding-top: 32px;
+  }
 }
 
 .about-me-list .ac .ac-trigger::after {
@@ -108,6 +112,7 @@
 .about-me-item .ac-trigger.about-me-btn {
   width: 36px;
   height: 36px;
+  padding: 0px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -134,6 +139,25 @@
 }
 
 .about-me-item-wrapper {
+  margin-left: 696px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .about-me-item:nth-child(1) .about-me-item-wrapper {
+    width: 612px;
+  }
+
+  .about-me-item:nth-child(2) .about-me-item-wrapper {
+    width: 284px;
+  }
+
+  .about-me-item:nth-child(3) .about-me-item-wrapper {
+    width: 465px;
+  }
+
+  .about-me-item:nth-child(3) .about-me-item-text:nth-child(1) {
+    width: 369px;
+  }
 }
 
 .about-me-list .ac .ac-panel .ac-text {
@@ -143,13 +167,18 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: #fafafa;
-  padding: 0;
+  padding: 0px;
 }
 
-.about-me-item-text {
+.ac .ac-panel .ac-text.about-me-item-text:not(:last-child) {
+  margin-bottom: 10px;
 }
 
-.btn-wrapper {
+.ac .ac-panel .ac-text.about-me-item-text:first-child {
+  margin-top: 8px;
+}
+
+.about-me-header {
   display: flex;
   justify-content: space-between;
 }
@@ -176,9 +205,6 @@
   }
 }
 
-.about-me-item-text.one {
-}
-
 .ac.role .ac-panel .ac-text:not(:last-child),
 .ac.education .ac-panel .ac-text:not(:last-child) {
   margin-bottom: 10px;
@@ -195,9 +221,6 @@
   }
 }
 
-
-
-
 /*.About me  ---- skills */
 .about-me-skills {
   display: flex;
@@ -205,7 +228,6 @@
   justify-content: center;
   align-items: center;
 }
-
 
 @media only screen and (min-width: 1440px) {
     .about-me-skills {
@@ -226,7 +248,7 @@
   text-align: center;
   padding-top: 53px;
   padding-bottom: 53px;
-  border: 1px solid #FAFAFA33;
+  border: 1px solid #fafafa33;
 }
 
 @media only screen and (min-width: 768px) {
@@ -239,7 +261,7 @@
 }
 
 .about-me-skill-item.active-slide {
-  background: #ED3B44;
+  background: #ed3b44;
 }
 
 .about-me-skills-button-next {
@@ -268,7 +290,7 @@
 
 @media only screen and (min-width: 1440px) {
   .about-me-skills-button-next {
-      margin-left: 72px;
+    margin-left: 72px;
   }
 }
 
@@ -282,9 +304,8 @@
 }
 
 @media only screen and (min-width: 768px) {
-    .about-me-icon {
-        height: 40px;
-        width: 40px;
-    }
+  .about-me-icon {
+    height: 40px;
+    width: 40px;
+  }
 }
-
