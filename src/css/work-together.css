@@ -1,10 +1,10 @@
 .work-together-section {
   position: relative;
-  padding-top: 64px;
 }
 
 .work-together-container {
   padding-top: 32px;
+  padding-bottom: 32px;
   background-image: url('/img/work-together/background-image-work-together-mob-@1x.png');
   background-repeat: no-repeat;
   background-position: right;
@@ -17,6 +17,7 @@
 }
 @media screen and (min-width: 768px) {
   .work-together-container {
+    padding-bottom: 169px;
     background-image: url('/img/work-together/background-image-work-together-tab-@1x.png');
   }
 }
@@ -60,7 +61,7 @@
 }
 
 .word-together {
-  margin-left: -50px;
+  margin-left: -53px;
 }
 
 .work-together-title-red-part {
@@ -214,7 +215,6 @@
   font-size: 14px;
   text-decoration: none;
   transition: all 200ms ease-in-out;
-  margin-bottom: 32px;
 }
 
 .work-together-link:hover {
@@ -223,11 +223,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .work-together-section {
-    padding-top: 96px;
-
-  }
-
   .introduction-container {
     padding-top: 80px;
     max-width: 542px;
@@ -258,7 +253,7 @@
   }
 
   .word-together {
-    margin-left: -95px;
+    margin-left: -91px;
   }
 
   .work-together-form {
@@ -285,16 +280,11 @@
 
   .work-together-link {
     padding: 18px 32px;
-    min-width: 239px;
     font-size: 16px;
   }
 }
 
 @media only screen and (min-width: 1440px) {
-  .work-together-section {
-    padding-top: 96px;
-  }
-
   .introduction-container {
     padding-top: 80px;
   }

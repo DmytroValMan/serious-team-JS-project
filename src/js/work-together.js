@@ -15,7 +15,7 @@ const modalSubtitle = document.querySelector('.work-together-modal-subtitle');
 // fetch api
 const PORTFOLIO_URL = 'https://portfolio-js.b.goit.study/api';
 
- function fetchApi(query, coments) {
+function fetchApi(query, coments) {
   const userData = {
     email: query.value.trim(),
     comment: coments.value.trim(),
@@ -38,14 +38,6 @@ const PORTFOLIO_URL = 'https://portfolio-js.b.goit.study/api';
     });
 }
 
-escapeFn = (event) => {
-  if (event.key === 'Escape') {
-    if (backdrop.classList.contains('is-open')) {
-      backdrop.classList.remove('is-open');
-    }
-  }
-}
-
 form.addEventListener('submit', event => {
   event.preventDefault();
 
@@ -66,13 +58,21 @@ form.addEventListener('submit', event => {
         form.reset();
 
         function toggleModal() {
-          document.addEventListener('keydown', escapeFn);
-          document.removeEventListener('keydown', escapeFn)
           backdrop.classList.remove('is-open');
+          document.removeEventListener('keydown', escapeFn);
           backdrop.removeEventListener('click', toggleModal);
           closeBtn.removeEventListener('click', toggleModal);
         }
 
+        const escapeFn = event => {
+          if (event.key === 'Escape') {
+            if (backdrop.classList.contains('is-open')) {
+              toggleModal();
+            }
+          }
+        };
+
+        document.addEventListener('keydown', escapeFn);
         backdrop.addEventListener('click', toggleModal);
         closeBtn.addEventListener('click', toggleModal);
       }
