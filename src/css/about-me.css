@@ -138,11 +138,11 @@
   }
 }
 
-.about-me-item-wrapper {
-  margin-left: 696px;
-}
-
 @media only screen and (min-width: 1440px) {
+  .about-me-item-wrapper {
+    margin-left: 696px;
+  }
+
   .about-me-item:nth-child(1) .about-me-item-wrapper {
     width: 612px;
   }
@@ -230,17 +230,17 @@
 }
 
 @media only screen and (min-width: 1440px) {
-    .about-me-skills {
-      padding: 0 32px;
-    }
+  .about-me-skills {
+    padding: 0 32px;
+  }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 374px) {
-    .about-me-skills .about-me-skills-swiper {
-      margin-left: 0px;
-      min-width: 260px;
-      width: 260px;
-    }
+  .about-me-skills .about-me-skills-swiper {
+    margin-left: 0px;
+    min-width: 260px;
+    width: 260px;
+  }
 }
 
 .about-me-skill-item {
@@ -265,22 +265,20 @@
 }
 
 .about-me-skills-button-next {
-    margin-left: 55px;
-    border-radius: 60px;
-    background-color: transparent;
-    border: 0px solid #FAFAFA80;
-    fill:transparent;
-    padding-right: 0px;
-    padding-left: 0px;
+  margin-left: 55px;
+  border-radius: 60px;
+  background-color: transparent;
+  border: 0px solid #fafafa80;
+  fill: transparent;
+  padding-right: 0px;
+  padding-left: 0px;
 }
-
 
 @media only screen and (min-width: 320px) and (max-width: 374px) {
-    .about-me-skills-button-next {
-        margin-left: auto;
-    }
+  .about-me-skills-button-next {
+    margin-left: auto;
+  }
 }
-
 
 @media only screen and (min-width: 768px) {
   .about-me-skills-button-next {
@@ -295,12 +293,12 @@
 }
 
 .about-me-icon {
-    height: 28px;
-    width: 28px;
-    display: inline-block;
-    stroke: currentColor;
-    background-color: transparent;
-    color: #3B3B3B;
+  height: 28px;
+  width: 28px;
+  display: inline-block;
+  stroke: currentColor;
+  background-color: transparent;
+  color: #3b3b3b;
 }
 
 @media only screen and (min-width: 768px) {
