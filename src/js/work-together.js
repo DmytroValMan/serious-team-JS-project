@@ -15,7 +15,7 @@ const modalSubtitle = document.querySelector('.work-together-modal-subtitle');
 // fetch api
 const PORTFOLIO_URL = 'https://portfolio-js.b.goit.study/api';
 
- function fetchApi(query, coments) {
+function fetchApi(query, coments) {
   const userData = {
     email: query.value.trim(),
     comment: coments.value.trim(),
@@ -59,10 +59,20 @@ form.addEventListener('submit', event => {
 
         function toggleModal() {
           backdrop.classList.remove('is-open');
+          document.removeEventListener('keydown', escapeFn);
           backdrop.removeEventListener('click', toggleModal);
           closeBtn.removeEventListener('click', toggleModal);
         }
 
+        const escapeFn = event => {
+          if (event.key === 'Escape') {
+            if (backdrop.classList.contains('is-open')) {
+              toggleModal();
+            }
+          }
+        };
+
+        document.addEventListener('keydown', escapeFn);
         backdrop.addEventListener('click', toggleModal);
         closeBtn.addEventListener('click', toggleModal);
       }

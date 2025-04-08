@@ -3,7 +3,8 @@
 }
 
 .work-together-container {
-  margin-top: 64px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   background-image: url('/img/work-together/background-image-work-together-mob-@1x.png');
   background-repeat: no-repeat;
   background-position: right;
@@ -16,6 +17,7 @@
 }
 @media screen and (min-width: 768px) {
   .work-together-container {
+    padding-bottom: 169px;
     background-image: url('/img/work-together/background-image-work-together-tab-@1x.png');
   }
 }
@@ -59,7 +61,7 @@
 }
 
 .word-together {
-  margin-left: -50px;
+  margin-left: -53px;
 }
 
 .work-together-title-red-part {
@@ -67,7 +69,7 @@
 }
 
 .work-together-form {
-  margin-top: 64px;
+  margin: 64px 0;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -203,19 +205,16 @@
   display: flex;
   flex-direction: row;
   gap: 4px;
-  margin-top: 64px;
-  margin-bottom: 32px;
 }
 
 .work-together-link {
+  display: block;
   border: 1px solid #fafafa33;
   border-radius: 60px;
   padding: 10px 12px;
-  min-width: 118px;
   font-size: 14px;
   text-decoration: none;
   transition: all 200ms ease-in-out;
-  margin-bottom: 32px;
 }
 
 .work-together-link:hover {
@@ -224,11 +223,8 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .work-together-container {
-    margin-top: 176px;
-  }
-
   .introduction-container {
+    padding-top: 80px;
     max-width: 542px;
     gap: 20px;
   }
@@ -257,13 +253,15 @@
   }
 
   .word-together {
-    margin-left: -95px;
+    margin-left: -91px;
   }
 
   .work-together-form {
     flex-direction: row;
     gap: 32px;
     align-items: flex-start;
+    margin-top: 48px;
+    margin-bottom: 18px;
   }
 
   .work-together-button {
@@ -277,24 +275,16 @@
   }
 
   .work-together-list {
-    margin-bottom: 169px;
-    margin-top: 18px;
     gap: 8px;
   }
 
   .work-together-link {
     padding: 18px 32px;
-    min-width: 239px;
     font-size: 16px;
   }
 }
 
 @media only screen and (min-width: 1440px) {
-  .work-together-container {
-    margin-top: 164px;
-    padding-top: 80px;
-  }
-
   .work-together-button {
     margin-left: 54px;
   }
@@ -303,11 +293,6 @@
   .work-together-comments {
     width: 390px;
     max-width: 100%;
-  }
-
-  .work-together-list {
-    margin-bottom: 169px;
-    margin-top: 78px;
   }
 }
 
