@@ -9,7 +9,8 @@
   padding: 0 24px 24px 24px;
 }
 .section-benefits{
-  padding-top: 64px;
+  margin-top: 96px;
+  margin-bottom: 64px;
 }
 .h2-benefits{
   font-weight: 600;
@@ -38,6 +39,7 @@
   flex-direction: column;
   background: #242527;
   border-radius: 20px;
+  padding: 24px;
   gap: 64px;
 }
 .svg-benefits{
@@ -45,7 +47,6 @@
 }
 .benefits-button{
   margin-top: 32px;
-  margin-bottom: 64px;
 }
 .send-button{
     border-width: 1px;
@@ -60,31 +61,20 @@
 }
 
 
-.container {
-    max-width: 375px;
-    margin: 0 auto;
-    padding: 0 16px;
-  }
   
   @media only screen and (min-width: 768px) {
-    .container {
-      max-width: 768px;
-      padding: 0 32px;
-    }
     .benefits-list {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
     }
   
-    .benefits-links {
-      gap: 64px;
-      padding: 24px;
-    }
     .content{
       padding: 0;
     }
-  
+    .section-benefits{
+      margin-bottom: 0;
+    }
     .svg-benefits {
       margin: 0;
     }
@@ -92,9 +82,6 @@
     .benefits-button {
       margin-top: 64px;
       margin-bottom: 96px;
-    }
-    .h2-benefits{
-      padding: 96px 0 32px 0;
     }
   }
   
@@ -126,23 +113,6 @@
       gap: 16px;
     }
   
-    .benefits-links {
-      display: flex;
-      flex-direction: column;
-      border-radius: 20px;
-      gap: 64px;
-      background: #242527;
-    }
-  
-    .svg-benefits {
-      margin: 0;
-      margin-right: 24px;
-    }
-  
-    .content {
-      padding: 0;
-      gap: 20px;
-    }
     .benefits-button {
       grid-column: 2 / 3;
       justify-self: start;
