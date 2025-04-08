@@ -23,11 +23,12 @@
 
 .section-hero-title {
   font-size: 50px;
+  font-weight: 500;
   line-height: 1;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   margin-bottom: 212px;
-
+  text-align: left;
   /* margin-top: 249px; */
 }
 
@@ -98,7 +99,7 @@
 @media screen and (min-width: 1440px) {
   .section-hero {
     background-image: url(../img/hero/hero_desk@1x.png);
-    padding-left: 178px;
+    padding-left: 146px;
     padding-bottom: 32px;
     padding-top: 300px;
     /* max-width: 1440px; */
@@ -111,17 +112,11 @@
   }
 
   .section-hero-title {
-    /* margin-left: 114px; */
-    /* margin-right: auto; */
     display: block;
+    max-width: 1084px;
     margin-bottom: 243px;
-
+    }
     /* max-width: 1084px; */
     /* margin: 268px 178px 243px 178px; */
-  }
-
-  .block-text {
-    display: block;
-    width: 100%;
-  }
+  }  
 }
