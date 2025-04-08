@@ -260,7 +260,7 @@
     flex-direction: row;
     gap: 32px;
     align-items: flex-start;
-    margin-top: 46px;
+    margin-top: 48px;
     margin-bottom: 18px;
   }
 
@@ -285,10 +285,6 @@
 }
 
 @media only screen and (min-width: 1440px) {
-  .introduction-container {
-    padding-top: 80px;
-  }
-
   .work-together-button {
     margin-left: 54px;
   }
