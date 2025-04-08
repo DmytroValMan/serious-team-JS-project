@@ -65,6 +65,7 @@
 .next-icon {
   stroke: currentColor;
   color: white;
+  fill: transparent;
 }
 
 .button-prev:disabled .prev-icon,
