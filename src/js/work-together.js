@@ -38,6 +38,14 @@ const PORTFOLIO_URL = 'https://portfolio-js.b.goit.study/api';
     });
 }
 
+escapeFn = (event) => {
+  if (event.key === 'Escape') {
+    if (backdrop.classList.contains('is-open')) {
+      backdrop.classList.remove('is-open');
+    }
+  }
+}
+
 form.addEventListener('submit', event => {
   event.preventDefault();
 
@@ -58,6 +66,8 @@ form.addEventListener('submit', event => {
         form.reset();
 
         function toggleModal() {
+          document.addEventListener('keydown', escapeFn);
+          document.removeEventListener('keydown', escapeFn)
           backdrop.classList.remove('is-open');
           backdrop.removeEventListener('click', toggleModal);
           closeBtn.removeEventListener('click', toggleModal);
