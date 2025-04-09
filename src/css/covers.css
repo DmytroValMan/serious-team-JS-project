@@ -1,4 +1,4 @@
-.covers {
+.covers-section {
   position: relative;
   background: radial-gradient(
       circle at 20% 30%,
@@ -19,7 +19,7 @@
 }
 
 .marquee-wrapper {
-  transform: rotate(17deg) translate(-40px, -180px);
+  transform: rotate(17deg) translate(-40px, -50px);
   margin: 32px 0;
 }
 
@@ -27,6 +27,7 @@
   display: flex;
   animation: scroll-left 25s linear infinite;
   gap: 24px;
+
 }
 
 .marquee-wrapper.right .covers-list {
@@ -65,18 +66,23 @@
 
 /* Планшети */
 @media (min-width: 768px) {
-  .covers .container {
-    max-height: 960px;
-  }
+
   .covers-list img {
     width: 544px;
     height: 100%;
+  }
+  .covers-section {
+    max-height: 960px;
   }
 }
 
 /* Десктоп */
 @media (min-width: 1024px) {
+  
   .covers-list {
     gap: 28px;
+  }
+  .marquee-wrapper {
+    transform: rotate(17deg) translate(-40px, -600px);
   }
 }
