@@ -1,3 +1,9 @@
+.box-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 212px;
+}
+
 .section-hero {
   background-image: url(../img/hero/hero_mob@1x.png);
   background-repeat: no-repeat;
@@ -19,9 +25,8 @@
   line-height: 1;
   letter-spacing: -0.03em;
   text-transform: uppercase;
-  margin-bottom: 212px;
   text-align: left;
-  flex-direction: column;
+  margin: 0 16px;
 }
 
 .section-hero-title .text-block {
@@ -79,7 +84,8 @@
   .section-hero-title {
     font-size: 90px;
     margin-bottom: 187px;
-    margin-left: 0;
+    margin-left: 32px;
+    margin-right: 104px;
   }
 
   .social-link {
@@ -91,6 +97,11 @@
   .social-list {
     justify-content: flex-end;
     gap: 8px;
+    margin-right: 32px;
+  }
+
+  .box-hero {
+    gap: 187px;
   }
 }
 
@@ -106,8 +117,10 @@
   }
 
   .section-hero-title {
-    /* max-width: 1084px; */
     margin: 0 auto;
-    margin-bottom: 243px;
+  }
+
+  .box-hero {
+    gap: 243px;
   }
 }
