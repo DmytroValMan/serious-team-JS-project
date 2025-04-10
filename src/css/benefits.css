@@ -13,12 +13,6 @@
   margin-bottom: 64px;
 }
 
-@media only screen and (min-width: 768px) {
-  .section-benefits {
-    padding-top: 96px;
-  }
-}
-
 .h2-benefits {
   font-weight: 600;
   text-transform: uppercase;
@@ -82,6 +76,7 @@
   }
   .section-benefits {
     margin-bottom: 96px;
+    padding-top: 96px;
   }
   .svg-benefits {
     margin: 0;
