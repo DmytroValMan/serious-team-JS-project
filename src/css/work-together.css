@@ -8,7 +8,6 @@
   background-image: url('/img/work-together/background-image-work-together-mob-@1x.png');
   background-repeat: no-repeat;
   background-position: right;
-  padding-left: 16px;
 }
 /* posicionate background image */
 @media screen and (min-resolution: 192dpi) {
@@ -23,7 +22,6 @@
   }
 
   .work-together-container {
-    padding-left: 32px;
     background-image: url('/img/work-together/background-image-work-together-tab-@1x.png');
   }
 }
@@ -36,7 +34,7 @@
 
 @media screen and (min-width: 1440px) {
   .work-together-container {
-    padding-left: 196px;
+    padding-left: 164px;
     background-image: url('/img/work-together/background-image-work-together-desc-@1x.png');
   }
 }
