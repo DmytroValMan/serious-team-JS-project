@@ -24,9 +24,8 @@ const swiper = new Swiper(projectsSwiperContainer, {
 
     // Navigation arrows
     navigation: {
-      nextEl: '#projects-swiper-next-id',
-      prevEl: '#projects-swiper-prev-id',
-      disabledClass: 'projects-disabled-button'
+      nextEl: '.projects-btn-next',
+      prevEl: '.projects-btn-prev',
     },
 
 });

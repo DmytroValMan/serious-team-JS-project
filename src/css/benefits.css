@@ -102,7 +102,6 @@
       margin: 0;     
       padding: 0;
     }
-  
     .benefits-list {
       grid-column: 2 / 3;
       display: grid;
