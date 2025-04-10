@@ -196,7 +196,7 @@
 }
 
   .projects-icon{
-    border-radius: 50px;
+    border-radius: 50%;
     display: inline-block;
     stroke-width: 0;
     stroke: currentColor;
