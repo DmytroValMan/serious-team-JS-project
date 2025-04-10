@@ -9,8 +9,8 @@
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
-  padding-top: 281px;
   padding-bottom: 32px;
+  padding-top: 281px;
 }
 
 @media screen and (max-width: 375px) and (min-resolution: 192dpi) {
