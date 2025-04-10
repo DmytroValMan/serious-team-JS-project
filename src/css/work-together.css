@@ -1,10 +1,10 @@
 .work-together-section {
   position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .work-together-container {
-  padding-top: 32px;
-  padding-bottom: 32px;
   background-image: url('/img/work-together/background-image-work-together-mob-@1x.png');
   background-repeat: no-repeat;
   background-position: right;
@@ -16,8 +16,12 @@
   }
 }
 @media screen and (min-width: 768px) {
-  .work-together-container {
+  .work-together-section {
+    padding-top: 80px;
     padding-bottom: 169px;
+  }
+
+  .work-together-container {
     background-image: url('/img/work-together/background-image-work-together-tab-@1x.png');
   }
 }
@@ -30,6 +34,7 @@
 
 @media screen and (min-width: 1440px) {
   .work-together-container {
+    padding-left: 164px;
     background-image: url('/img/work-together/background-image-work-together-desc-@1x.png');
   }
 }
@@ -224,7 +229,6 @@
 
 @media only screen and (min-width: 768px) {
   .introduction-container {
-    padding-top: 80px;
     max-width: 542px;
     gap: 20px;
   }
@@ -285,6 +289,8 @@
 }
 
 @media only screen and (min-width: 1440px) {
+
+
   .work-together-button {
     margin-left: 54px;
   }
