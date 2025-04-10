@@ -212,7 +212,7 @@
       }
   }
   .project-svg-button {
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: transparent;
     color: #FAFAFA;
     border: 1px solid #FAFAFA80;
