@@ -55,7 +55,7 @@
 }
 
 .send-button {
-  display: block;
+  display: inline-block;
   border-radius: 60px;
   padding: 18px 36px;
   border: 1px solid #fafafa33;
