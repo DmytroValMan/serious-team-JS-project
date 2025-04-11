@@ -22,7 +22,7 @@ async function loadReviews() {
       .map(
         review => `
         <div class="swiper-slide swiper-slide-reviews">
-          <img class="review-img" src="${review.avatar_url}" alt="${review.author}" />
+          <img class="review-img" src="${review.avatar_url}" alt="${review.author}" loading="lazy" />
           <p class="review-name">${review.author}</p>
           <p class="review-text">${review.review}</p>  
         </div>
