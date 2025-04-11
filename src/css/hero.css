@@ -121,3 +121,9 @@
     gap: 243px;
   }
 }
+
+@media screen and (max-width: 374px) {
+  .section-hero-title {
+    font-size: 44px;
+  }
+}
