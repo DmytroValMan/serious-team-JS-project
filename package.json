@@ -1,11 +1,11 @@
 {
-  "name": "vanilla-app-template",
+  "name": "project-serious-team-JS",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/serious-team-JS-project/",
+    "build": "vite build --base=/project-serious-team-JS/",
     "preview": "vite preview"
   },
   "devDependencies": {
